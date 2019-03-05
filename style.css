@@ -1,0 +1,82 @@
+*{margin: 0;padding: 0;}
+a{text-decoration:none;}
+kbd{border: 1px solid red;
+    width: 4em; 
+    height: 4em;
+    display:inline-block;
+    text-transform: uppercase;/*文字-转换：大写字母*/
+    position: relative;/*相对定位*/
+}
+kbd > button{
+    position: absolute;/*绝对定位*/
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+kbd:hover > button{
+    display: inline-block;
+}
+body{
+    height: 100vh;/*百分百窗口高度viewport height*/
+    background:black url(./img/wall.jpg) no-repeat
+    center center;
+    background-size: cover;
+
+}
+#main > div:nth-child(2){
+    margin-left: -22px;/*将div：第n个子元素*/    
+}
+#main > div:nth-child(3){/*#main是指定id为main元素生效*/
+    margin-left: -90px;
+}
+#main {
+    display: inline-block;/*显示效果 行内的块级元素*/
+    
+}
+main{
+    text-align: center;/*给内联元素居中可以 文字-排列：居中*/
+    display: flex;/*flex布局*/
+    justify-content: center;/*对齐-内容(主轴对齐):居中*/
+    align-items: center;
+    height: 100vh;/*百分百窗口高度viewport height*/
+}
+.key {
+    width:50px;
+    height:40px;
+    background: linear-gradient(to bottom,
+     #292929 0%,
+     #111111 100%);
+     border:1px solid #373737;
+     color: #c5c5c5;
+    border-radius: 6px;/*边框-圆角是从圆心到外边的距离 */
+    box-shadow: 0 0 0px 1px #1A1B1C,
+    0 0 0px 2px #1F2020,
+    0 2px 0 2px #080808;
+    /*多层外框阴影可以上多个box-shadow来解决*/
+    position: relative;
+    font-size: 18px;
+    
+    
+}
+.key  .text{
+    position:absolute;
+    left: 4px;
+    top: 2px;
+}
+.row{
+    margin: 20px 0px;
+}
+.row .key{
+    margin: 0 8px;
+}
+.wrapper{
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 10px;    
+}
+.key img{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 2px;
+    top: 23px;
+}
